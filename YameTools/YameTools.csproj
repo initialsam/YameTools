@@ -1,7 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageProjectUrl>https://github.com/initialsam/YameTools</PackageProjectUrl>
+    <Copyright>https://github.com/initialsam/YameTools/blob/master/LICENSE</Copyright>
+	<Version>0.0.1</Version>
+	<UserSecretsId>93269c33-047e-45f3-af90-313120b77d3d</UserSecretsId>
+	<Nullable>disable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+  </ItemGroup>
 
 </Project>
