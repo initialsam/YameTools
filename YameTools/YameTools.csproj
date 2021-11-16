@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageProjectUrl>https://github.com/initialsam/YameTools</PackageProjectUrl>
     <Copyright>https://github.com/initialsam/YameTools/blob/master/LICENSE</Copyright>
-	<Version>0.0.1</Version>
+	<Version>0.0.2</Version>
 	<UserSecretsId>93269c33-047e-45f3-af90-313120b77d3d</UserSecretsId>
 	<Nullable>disable</Nullable>
   </PropertyGroup>
