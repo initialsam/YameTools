@@ -19,8 +19,7 @@ namespace YameTools.Helper
         {
             var setting = ConfigurationManager.AppSettings[key];
             if (setting == null) return defaultVale;
-            var a = new List<string>();
-            a.Any()
+
             try
             {
                 return (T)Convert.ChangeType(setting, typeof(T));
