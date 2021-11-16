@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Linq;
 using System.Text;
 
 namespace YameTools.Helper
@@ -18,7 +19,8 @@ namespace YameTools.Helper
         {
             var setting = ConfigurationManager.AppSettings[key];
             if (setting == null) return defaultVale;
-
+            var a = new List<string>();
+            a.Any()
             try
             {
                 return (T)Convert.ChangeType(setting, typeof(T));

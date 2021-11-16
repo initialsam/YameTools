@@ -16,5 +16,13 @@ namespace YameTools.Extensions
 
         public static string JoinString(this IEnumerable<string> source, string seperator) =>
             string.Join(seperator, source);
+
+        public static bool IsEmpty<T>(this IEnumerable<T> list)
+        {
+            if (list is ICollection<T>) return ((ICollection<T>)list).Count == 0;
+
+            return list.Any() == false;
+        }
+
     }
 }
