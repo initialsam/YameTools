@@ -12,5 +12,7 @@ namespace YameTools.Extensions
     {
         public static bool IsNullOrEmpty(this String Input) => String.IsNullOrEmpty(Input);
         public static bool IsNullOrWhiteSpace(this String Input) => String.IsNullOrWhiteSpace(Input);
+        
+        public static bool HasValue(this String Input) => String.IsNullOrEmpty(Input) == false;
     }
 }
