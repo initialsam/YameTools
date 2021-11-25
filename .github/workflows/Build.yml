@@ -6,20 +6,26 @@ on:
   pull_request:
     branches: [ master ]
 
+env:
+  PROJECT_PATH: 'YameTools/YameTools.csproj'
+  PACKAGE_OUTPUT_DIRECTORY: ${{ github.workspace }}\output
+  NUGET_SOURCE_URL: 'https://api.nuget.org/v3/index.json'
+
 jobs:
-  build:
-
+  deploy:
+    name: 'Deploy'
     runs-on: 'windows-latest'
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup .NET
+    - name: 'Checkout'
+      uses: actions/checkout@v2
+
+    - name: 'Install dotnet'
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.x
-    - name: Restore packages
-      run: dotnet restore
-    - name: Build
+        dotnet-version: '5.0.x'
+
+    - name: 'Restore packages'
+      run: dotnet restore ${{ env.PROJECT_PATH }}
+
+    - name: 'Build project'
       run: dotnet build ${{ env.PROJECT_PATH }} --no-restore --configuration Release
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
