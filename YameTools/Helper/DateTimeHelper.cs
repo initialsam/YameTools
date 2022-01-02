@@ -175,5 +175,26 @@ namespace YameTools.Helper
             startTime = DateTimeHelper.SetDayofFirstSecBySevenAm(startTime);
             endTime = DateTimeHelper.SetDayofLastSecByBySevenAm(endTime);
         }
+
+        /// <summary>
+        /// Timestamp to DateTime
+        /// </summary>
+        /// <param name="int"></param>
+        /// <returns></returns>
+        public static DateTime TimestampToDateTimeUtc(this long @long)
+        {
+            return (new DateTime(1970, 1, 1)).AddSeconds(@long);
+        }
+
+
+        /// <summary>
+        /// DateTime To Timestamp
+        /// </summary>
+        /// <param name="dateTime"></param>
+        /// <returns></returns>
+        public static int ToTimestamp(this DateTime @dateTime)
+        {
+            return (int)@dateTime.Subtract(new DateTime(1970, 1, 1)).TotalSeconds;
+        }
     }
 }

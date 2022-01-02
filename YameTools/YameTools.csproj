@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+	<TargetFrameworks>netcoreapp3.1;net461;</TargetFrameworks>
     <PackageProjectUrl>https://github.com/initialsam/YameTools</PackageProjectUrl>
     <Copyright>https://github.com/initialsam/YameTools/blob/master/LICENSE</Copyright>
 	<Version>0.0.3</Version>
@@ -10,8 +10,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+    <PackageReference Include="System.IO.Compression" Version="4.3.0" />
   </ItemGroup>
 
 </Project>

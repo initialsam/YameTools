@@ -24,5 +24,17 @@ namespace YameTools.Extensions
             return list.Any() == false;
         }
 
+        /// <summary>
+        /// 分頁
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="list"></param>
+        /// <param name="page">第幾頁</param>
+        /// <param name="pageSize">一頁幾筆</param>
+        /// <returns></returns>
+        public static IEnumerable<T> Page<T>(this IEnumerable<T> @list, int page, int pageSize)
+        {
+            return @list.Skip((page - 1) * pageSize).Take(pageSize);
+        }
     }
 }
