@@ -6,6 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Resources;
 using System.Text;
+using System.Web;
 
 namespace YameTools.Extensions
 {
@@ -68,6 +69,38 @@ namespace YameTools.Extensions
                 dst += Encoding.Unicode.GetString(bytes);
             }
             return dst;
+        }
+
+        /// <summary>
+        /// 前後加上Dash
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static string AddDashAround(this string value)
+        {
+            return $"ー {value} ー";
+        }
+
+        /// <summary>
+        /// 在前面加上 - 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static string AddDashBefore(this string value)
+        {
+            return $" - {value}";
+        }
+
+        /// <summary>
+        /// 移除 <p> </p> <br>
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static string RemoveHtmlTagPAndBr(this string value)
+        {
+            return value.Replace("<p>", "")
+                        .Replace("<br>", "")
+                        .Replace("</p>", "");
         }
     }
 }
