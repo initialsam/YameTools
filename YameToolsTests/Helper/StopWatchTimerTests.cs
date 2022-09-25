@@ -16,7 +16,7 @@ namespace YameTools.Helper.Tests
             //default is Console.WriteLine
             using (new StopWatchTimer("Test"))
             {
-                //Thread.Sleep(1234);
+                Thread.Sleep(65432);
                 //show μs
                 //Thread.Sleep(new TimeSpan(1));
             }

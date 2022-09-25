@@ -35,28 +35,28 @@ namespace YameTools.Helper
 
         private string DispalyTime(TimeSpan elapsed)
         {
-            var result = String.Empty;
+            var result = new StringBuilder();
             if(elapsed.Hours != 0)
             {
-                result += $"{elapsed.Hours}h ";
+                result.Append($"{elapsed.Hours}h ");
             }
             if (elapsed.Minutes != 0)
             {
-                result += $"{elapsed.Minutes}m ";
+                result.Append($"{elapsed.Minutes}m ");
             }
             if (elapsed.Seconds != 0)
             {
-                result += $"{elapsed.Seconds}s ";
+                result.Append($"{elapsed.Seconds}s ");
             }
             if (elapsed.Milliseconds == 0)
             {
-                result += $"{elapsed.TotalMilliseconds * 1000:n3}μs";
+                result.Append($"{elapsed.TotalMilliseconds * 1000:n3}μs");
             }
             else
             {
-                result += $"{elapsed.Milliseconds}ms ";
+                result.Append($"{elapsed.Milliseconds}ms ");
             }
-            return result;
+            return result.ToString();
         }
     }
 }
