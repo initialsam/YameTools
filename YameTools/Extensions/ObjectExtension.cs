@@ -1,9 +1,8 @@
-﻿using Newtonsoft.Json;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace YameTools.Extensions
 {
@@ -16,7 +15,7 @@ namespace YameTools.Extensions
         /// <returns></returns>
         public static string ToJson(this object @object)
         {
-            return JsonConvert.SerializeObject(@object, Formatting.Indented);
+            return JsonSerializer.Serialize(@object);
         }
     }
 }
