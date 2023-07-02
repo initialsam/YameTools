@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<TargetFrameworks>netcoreapp3.1;net461;</TargetFrameworks>
+	<TargetFrameworks>net6.0</TargetFrameworks>
     <PackageProjectUrl>https://github.com/initialsam/YameTools</PackageProjectUrl>
     <Copyright>https://github.com/initialsam/YameTools/blob/master/LICENSE</Copyright>
 	<Version>0.0.3</Version>
